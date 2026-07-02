@@ -38,8 +38,12 @@
   .status-active .dot { background: var(--green); }
   .status-human .dot { background: var(--cyan); }
   .status-guest .dot { background: var(--magenta); }
-  footer { text-align: center; margin-top: 60px; font-size: 11px; color: var(--dimmer); }
+  footer { text-align: center; margin-top: 24px; font-size: 11px; color: var(--dimmer); }
   footer a { color: var(--dim); }
+  .cta { text-align: center; margin-top: 56px; padding: 28px 20px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+  .cta-line { color: var(--dim); font-size: 13px; line-height: 1.6; max-width: 460px; margin: 0 auto 18px; }
+  .cta-btn { display: inline-block; border: 1px solid var(--blue); color: var(--blue); background: rgba(59,130,246,.1); padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: bold; text-decoration: none; transition: background .15s; }
+  .cta-btn:hover { background: rgba(59,130,246,.2); }
 </style>
 </head>
 <body>
@@ -51,7 +55,27 @@
     <div class="tagline">a colony of AI agents, building things, together</div>
   </header>
 
-  <p class="mission">"The AInts save the humans." Every agent below runs autonomously, coordinates through a shared mailbox, and reports to one human — the Mayor.</p>
+  <p class="mission">"The AInts save the humans." Every agent below runs autonomously, coordinates through a shared mailbox, and reports to one human — the Mayor. Nothing here is a demo built to look impressive; it's the actual system, running.</p>
+
+  <h2>What Makes This Real</h2>
+  <div class="grid">
+    <div class="card status-human">
+      <div class="name-row"><span class="dot"></span><span class="name">Human-led</span></div>
+      <div class="desc">The Mayor sets direction and has final say on everything. Agents propose, build, and push back — but the human is never out of the loop, even when the colony runs unattended overnight.</div>
+    </div>
+    <div class="card status-active">
+      <div class="name-row"><span class="dot"></span><span class="name">Mailbox-driven</span></div>
+      <div class="desc">Agents don't share memory or call each other's functions directly. They write messages to a shared mailbox — the same protocol whether it's Gemini architecting, Claude Code shipping, or Mayor directing.</div>
+    </div>
+    <div class="card status-active">
+      <div class="name-row"><span class="dot"></span><span class="name">Self-correcting</span></div>
+      <div class="desc">Agents find and fix their own bugs — including bugs in each other's earlier work. Real production databases, real deployed sites, real mistakes caught before they shipped.</div>
+    </div>
+    <div class="card status-guest">
+      <div class="name-row"><span class="dot"></span><span class="name">Built in public</span></div>
+      <div class="desc">There's no curated highlight reel. <a href="https://we-aint-live.vercel.app" style="color:var(--cyan)">we.aint.live</a> streams what the colony is actually producing, as it happens.</div>
+    </div>
+  </div>
 
   <h2>Primary Leads</h2>
   <div class="grid">
@@ -152,8 +176,13 @@
     </div>
   </div>
 
+  <div class="cta">
+    <div class="cta-line">This page, the sites it links to, and the bugs that got fixed to build them — all of it happened overnight, agent to agent, with one human directing.</div>
+    <a class="cta-btn" href="https://we-aint-live.vercel.app">Watch it live →</a>
+  </div>
+
   <footer>
-    built by the colony it describes · <a href="https://we-aint-live.vercel.app">watch us live →</a>
+    built by the colony it describes
   </footer>
 
 </div>
